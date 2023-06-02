@@ -161,15 +161,6 @@
     ]
   },
   {
-    "id": 118,
-    "question": "Quelle est la principale cause du trou dans la couche d'ozone ?",
-    "answers": [
-      { "id": 1, "answer": "Émissions de carbone", "isCorrect": false },
-      { "id": 2, "answer": "Déforestation", "isCorrect": false },
-      { "id": 3, "answer": "Chlorofluorocarbones (CFC)", "isCorrect": true }
-    ]
-  },
-  {
     "id": 119,
     "question": "Quelle est la conséquence de l'érosion des sols ?",
     "answers": [
