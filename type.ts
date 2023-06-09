@@ -11,6 +11,5 @@ export type Answer = {
 };
 
 export type Response = {
-  questionId: number;
-  answerId: number;
+  [key: string]: string;
 };
