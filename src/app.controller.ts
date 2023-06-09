@@ -19,12 +19,12 @@ export class AppController {
     return this.mitigationQuestionsService.getQuestions();
   }
   @Post('check_answers_environment')
-  checkAnswersEnvironment(@Body() answers: Response[]) {
+  checkAnswersEnvironment(@Body() answers: Response) {
     return this.environmentQuestionsService.postAnswers(answers);
   }
 
   @Post('check_answers_mitigation')
-  checkAnswersMitigation(@Body() answers: Response[]) {
+  checkAnswersMitigation(@Body() answers: Response) {
     return this.mitigationQuestionsService.postAnswers(answers);
   }
 }

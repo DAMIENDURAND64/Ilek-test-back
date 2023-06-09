@@ -1,6 +1,10 @@
 import { Test, TestingModule } from '@nestjs/testing';
 import { EnvironmentQuestionsService } from './environmentQuestionsService';
 
+jest.mock('../utils/randomFiveQuestions.ts', () => ({
+  RandomFiveQuestions: jest.fn().mockImplementation((questions) => questions),
+}));
+
 describe('EnvironmentQuestionsService', () => {
   let service: EnvironmentQuestionsService;
 
@@ -24,12 +28,9 @@ describe('EnvironmentQuestionsService', () => {
   });
 
   it('should count correct answers', () => {
-    const answers = [
-      //true
-      { questionId: 101, answerId: 1 },
-      //false
-      { questionId: 107, answerId: 2 },
-    ];
+    const answers =
+      //1 true and 1 false
+      { 101: '1', 107: '2' };
 
     const result = service.postAnswers(answers);
     expect(result.correctAnswersCount).toBe(1);
